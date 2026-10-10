@@ -67,6 +67,10 @@ cd ../k8s && kubectl apply -f deployment.yaml -f service.yaml -f ingress.yaml
 
 ## 🏗️ Architecture & Traffic Flow
 
+<p align="center">
+  <img src="app/image.png" alt="AWS EKS Streamlit Q&A Chatbot POC Architecture" width="850"/>
+</p>
+
 ```
                       [ User Browser ]
                              │
@@ -127,6 +131,7 @@ eks-streamlit-chatbot-poc/
 ├── app/
 │   ├── .env.example              # Environment variables template
 │   ├── Dockerfile                # Multi-stage lightweight Python 3.11 container
+│   ├── image.png                 # POC Architecture diagram
 │   ├── main.py                   # Streamlit app with Groq SDK & streaming chat UI
 │   └── requirements.txt          # Dependencies: streamlit, python-dotenv, groq
 ├── terraform/
