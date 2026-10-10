@@ -1,0 +1,14 @@
+# Example Terraform variable overrides
+# To use: cp terraform.tfvars.example terraform.tfvars
+
+aws_region           = "us-east-1"
+environment          = "poc"
+cluster_name         = "streamlit-chatbot-eks"
+vpc_cidr             = "10.0.0.0/16"
+public_subnet_cidrs  = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs = ["10.0.10.0/24", "10.0.20.0/24"]
+node_instance_types  = ["t3.medium"]
+desired_capacity     = 2
+min_capacity         = 1
+max_capacity         = 3
+ecr_repository_name  = "eks-streamlit-chatbot"
